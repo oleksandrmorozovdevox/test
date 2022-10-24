@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__title{
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+
+    &__status{
+        display: flex;
+    }
+}
+
+.circle {
+    fill:#FF3D00;
+}
+
+.container {
+    margin-top: .5rem;
+    border: 1px solid #B8B9BC;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.uncomplete {
+    color: #FF3D00;
+    font-weight: 500;
+    background: rgba(255, 61, 0, 0.1);
+    border: 1px solid #FF3D00;
+    border-radius: 4px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.low-risk {
+    color: #53D86A;
+    font-weight: 500;
+    background: #D7E5DA;
+    border: 1px solid #53D86A;
+    border-radius: 4px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.info{
+    display: flex;
+    margin-top: .5rem;
+}
+
+.gray-text{
+    margin-right: .5rem;
+    font-weight: 500;
+    color: #B8B9BC;
+}
+
+.needs-review{
+    color: #B8B9BC;
+    font-weight: 500;
+    background: #ECECED;
+    border: 1px solid #B8B9BC;
+    border-radius: 4px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.due-date {
+    color:red;
+}

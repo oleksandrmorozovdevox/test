@@ -1,0 +1,88 @@
+.container {
+    margin-left: 2.5rem;
+    margin-top: 2.25rem;
+
+    &__text{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 140%;
+    }
+
+    &__selections{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.625rem;
+    }
+
+    &__map {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.selection-buttons {
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    margin-right: 2.25rem;
+    &__select {
+        margin-right: 2.5rem;
+    }
+    
+    &__search {
+        min-width: 20.875rem;
+        max-width: 20.875rem;
+        width: 100%;
+    }
+}
+
+.top{
+    display: flex;
+    align-items: center;
+}
+
+.buttons-selection {
+    display: flex;
+    color:  #2188D9;
+    align-items: flex-start;
+    margin-right: 2.5rem;
+}
+
+.wrapper-export{
+    display: flex;
+    align-items: center;
+    margin-left: 1.7188rem;
+}
+
+.submission-items{
+    min-width: 16.1875rem;
+    max-width: 28.6875rem;
+    width: 100%;
+}
+
+.search {
+  width: 100%;
+}
+
+
+
+::ng-deep .mat-form-field-flex {
+    display: flex;
+    height: 48px;
+    align-items: center !important;
+    flex-direction: row-reverse !important;
+}
+
+.mat-button-toggle-checked {
+    color:white;
+    background-color: #2188D9 !important;
+}
+
+::ng-deep .mat-button-toggle-button {
+    width: 5rem !important;
+}
+
+::ng-deep .mat-form-field-suffix {
+    margin-top: 0.25rem;
+}

@@ -1,0 +1,78 @@
+<div class="container">
+  <div><span class="container__text">Submissions</span></div>
+
+  <div class="container__selections">
+    <div class="wrapper">
+      <div class="wrapper__search wrapper__select">
+        <mat-form-field appearance="outline" class="search">
+          <mat-label>Search</mat-label>
+          <input matInput />
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline" class="wrapper__select">
+        <mat-label>Select form</mat-label>
+        <mat-select>
+          <mat-option>Clear</mat-option>
+          <mat-option value="valid">Valid option</mat-option>
+          <mat-option value="invalid">Invalid option</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="wrapper__select">
+        <mat-label>Select status</mat-label>
+        <mat-select>
+          <mat-option>Clear</mat-option>
+          <mat-option value="valid">Valid option</mat-option>
+          <mat-option value="invalid">Invalid option</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <form [formGroup]="form">
+        <mat-form-field appearance="outline" class="wrapper__select">
+          <input matInput [matDatepicker]="datePicker" formControlName="date" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="datePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div class="buttons-selection">
+      <div class="top">
+        <div>
+          <mat-button-toggle-group value="Map">
+            <mat-button-toggle value="Map">Map</mat-button-toggle>
+            <mat-button-toggle value="List">List</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+        <div class="wrapper-export">
+          <img src="../../../assets/img/Download.svg" />
+          <span>Export</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container__map">
+    <div class="submission-items">
+      <ng-container *ngFor="let item of submissionItems">
+        <app-submission-item [submissionItem]="item"></app-submission-item>
+      </ng-container>
+    </div>
+    <div>
+      <iframe
+        width="997"
+        height="623"
+        id="gmap_canvas"
+        src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+      ></iframe>
+    </div>
+  </div>
+</div>

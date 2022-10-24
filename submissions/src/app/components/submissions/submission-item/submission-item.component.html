@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="header">
+    <div>
+      <span class="header__title">{{ submissionItem.title }}</span>
+    </div>
+    <div class="header__status" [ngSwitch]="submissionItem.status">
+      <span *ngSwitchCase="statuses.Uncomplete" class="uncomplete"
+        ><svg class="circle" width="12" height="12" viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="100" fill="red" stroke="red" />
+        </svg>
+        {{ submissionItem.status }}</span
+      >
+      <span *ngSwitchCase="statuses.LowRisk" class="low-risk">
+        <svg class="circle" width="12" height="12" viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="100" fill="green" stroke="green" />
+        </svg>
+        {{ submissionItem.status }}</span
+      >
+      <span *ngSwitchCase="statuses.NeedsReview" class="needs-review">
+        <svg class="circle" width="12" height="12" viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="100" fill="gray" stroke="gray" />
+        </svg>
+        {{ submissionItem.status }}</span
+      >
+    </div>
+  </div>
+
+  <div class="info">
+    <div>
+      <span class="gray-text">From:</span>
+    </div>
+    <div>
+      {{ submissionItem.from }}
+    </div>
+  </div>
+
+  <div class="info">
+    <div>
+      <span class="gray-text">To:</span>
+    </div>
+    <div>
+      {{ submissionItem.to }}
+    </div>
+  </div>
+
+  <div class="info">
+    <div>
+      <span class="gray-text">Due Date:</span>
+    </div>
+    <div class="due-date">
+      {{ submissionItem.dueDate }}
+    </div>
+  </div>
+</div>
